@@ -188,12 +188,12 @@ public class LogicaProgramacaoController {
 	}
 
 	@GetMapping("/antecessorSucessorPor")
-	public String[] antecessorSucessorPor(@RequestParam final String[] array, @RequestParam final String valor) {
+	public String[] antecessorSucessorPorValor(@RequestParam final String[] array, @RequestParam final String valor) {
 		return this.logicaProgramacaoService.antecessorSucessorPor(array, valor);
 	}
 
-	@GetMapping("/antecessorSucessorPor")
-	public String[] antecessorSucessorPor(@RequestParam final String[] array, @RequestParam final int posicao) {
+	@GetMapping("/antecessorSucessorPorPosicao")
+	public String[] antecessorSucessorPorPosicao(@RequestParam final String[] array, @RequestParam final int posicao) {
 		return this.logicaProgramacaoService.antecessorSucessorPor(array, posicao);
 	}
 

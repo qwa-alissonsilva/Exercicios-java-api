@@ -14,9 +14,12 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.springframework.stereotype.Service;
+
 import br.mentorado.apiservice.domain.LogicaProgramacao;
 import br.mentorado.apiservice.domain.persistence.entity.Funcionario;
 
+@Service
 public class LogicaProgramacaoService implements LogicaProgramacao {
 
 	@Override
