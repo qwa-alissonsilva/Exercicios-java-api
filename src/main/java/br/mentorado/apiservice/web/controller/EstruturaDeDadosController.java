@@ -66,7 +66,7 @@ public class EstruturaDeDadosController {
 		return this.estruturaDadosSetService.valoresDiferentesDaSegundaListaOrdenados(valores1, valores2);
 	}
 
-	@GetMapping("/set/valoresDiferentesDaSegundaListaOrdenados")
+	@GetMapping("/set/pessoasUnicasOrdenados")
 	public Set<Funcionario> pessoasUnicasOrdenados(@RequestParam List<Funcionario> pessoas) {
 		return this.estruturaDadosSetService.pessoasUnicasOrdenados(pessoas);
 	}
@@ -110,7 +110,7 @@ public class EstruturaDeDadosController {
 		return this.estruturaDadosMapService.mapaFrequenciaValoresLista(mapa);
 	}
 
-	@GetMapping("/map/nomeTelefones")
+	@GetMapping("/map/nomeTelefonesPorElemtos")
 	public Map<String, List<String>> nomeTelefones(@RequestParam List<String> elemento) {
 		return this.estruturaDadosMapService.nomeTelefones(elemento);
 	}
@@ -130,7 +130,7 @@ public class EstruturaDeDadosController {
 		return this.estruturaDadosMapService.valoresMapa(mapa);
 	}
 
-	@GetMapping("/map/nomeTelefones")
+	@GetMapping("/map/nomeTelefonesPorLimite")
 	public Map<String, List<Integer>> nomeTelefones(@RequestParam int limite) {
 		return this.estruturaDadosMapService.nomeTelefones(limite);
 	}

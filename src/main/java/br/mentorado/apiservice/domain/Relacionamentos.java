@@ -3,9 +3,9 @@ package br.mentorado.apiservice.domain;
 import java.math.BigDecimal;
 import java.util.List;
 
-import br.mentorado.apiservice.domain.persistence.entity.Contato;
-import br.mentorado.apiservice.domain.persistence.entity.Endereco;
-import br.mentorado.apiservice.domain.persistence.entity.Pessoa;
+import br.mentorado.apiservice.domain.xml.type.ContatoXmlType;
+import br.mentorado.apiservice.domain.xml.type.EnderecoXmlType;
+import br.mentorado.apiservice.domain.xml.type.PessoaXmlType;
 
 /**
  * Precisamos criar os relacionamentos entre os modelos abaixo:
@@ -35,48 +35,48 @@ public interface Relacionamentos {
 
 	public List<String> buscarNomeSobrenomeDasPessoasPorEstadoCivil(final String estadoCivil);
 
-	public List<Pessoa> buscarPessoasPorTipoResidencia(final String tipoResidencia);
+	public List<PessoaXmlType> buscarPessoasPorTipoResidencia(final String tipoResidencia);
 
-	public List<Pessoa> buscarPessoasPorTipoContato(final String tipoContato);
+	public List<PessoaXmlType> buscarPessoasPorTipoContato(final String tipoContato);
 
-	public List<Pessoa> buscarPessoasPorBairro(final String bairro);
+	public List<PessoaXmlType> buscarPessoasPorBairro(final String bairro);
 
-	public List<Pessoa> buscarPessoasPorNomeBairroContem(final String valor);
+	public List<PessoaXmlType> buscarPessoasPorNomeBairroContem(final String valor);
 
-	public List<Pessoa> buscarPessoasPorEstado(final String estado);
+	public List<PessoaXmlType> buscarPessoasPorEstado(final String estado);
 
-	public List<Pessoa> buscarPessoasPorProfissao(final String nomeProfissao);
+	public List<PessoaXmlType> buscarPessoasPorProfissao(final String nomeProfissao);
 
-	public List<Pessoa> buscarPessoasPorProfissaoNomeAreaAtuacaoContem(final String valor);
+	public List<PessoaXmlType> buscarPessoasPorProfissaoNomeAreaAtuacaoContem(final String valor);
 
-	public List<Pessoa> buscarPessoasPorSalarioBaseMaiorQue(final BigDecimal salarioBase);
+	public List<PessoaXmlType> buscarPessoasPorSalarioBaseMaiorQue(final BigDecimal salarioBase);
 
-	public List<Pessoa> buscarPessoasPorSalarioBaseMaiorIgual(final BigDecimal salarioBase);
+	public List<PessoaXmlType> buscarPessoasPorSalarioBaseMaiorIgual(final BigDecimal salarioBase);
 
-	public List<Pessoa> buscarPessoasPorSalarioBaseEntre(final BigDecimal salarioBaseInicio,
+	public List<PessoaXmlType> buscarPessoasPorSalarioBaseEntre(final BigDecimal salarioBaseInicio,
 			final BigDecimal salarioBaseFim);
 
-	public List<Pessoa> buscarPessoasPorEscolaridadeConcluida();
+	public List<PessoaXmlType> buscarPessoasPorEscolaridadeConcluida();
 
-	public List<Pessoa> buscarPessoasPorEscolaridadeAreaAtuacao(final String areaAtuacao);
+	public List<PessoaXmlType> buscarPessoasPorEscolaridadeAreaAtuacao(final String areaAtuacao);
 
-	public List<Pessoa> buscarPessoasPorEscolaridadeAnoTermino(final Integer ano);
+	public List<PessoaXmlType> buscarPessoasPorEscolaridadeAnoTermino(final Integer ano);
 
-	public List<Pessoa> buscarPessoasPorEscolaridadeQuantidadeSemestre(final Integer semestre);
+	public List<PessoaXmlType> buscarPessoasPorEscolaridadeQuantidadeSemestre(final Integer semestre);
 
-	public List<Pessoa> buscarPessoasPorProfissaoAreaAtuacaoEscolaridadeConcluido(final String areaAtuacao);
+	public List<PessoaXmlType> buscarPessoasPorProfissaoAreaAtuacaoEscolaridadeConcluido(final String areaAtuacao);
 
-	public List<Pessoa> buscarPessoasPorProfissaoAreaAtuacaoEscolaridadePorSemestre(final String areaAtuacao,
+	public List<PessoaXmlType> buscarPessoasPorProfissaoAreaAtuacaoEscolaridadePorSemestre(final String areaAtuacao,
 			final Integer semestre);
 
-	public List<Pessoa> buscarPessoasPorEstadoCivilProfissaoAreaAtuacaoEscolaridadePorAreaAtuacao(
+	public List<PessoaXmlType> buscarPessoasPorEstadoCivilProfissaoAreaAtuacaoEscolaridadePorAreaAtuacao(
 			final String estadoCivil, final String areaAtuacaoProfissao, final String areaAtuacaoEscolaridade);
 
-	public List<Endereco> buscarEnderecoDasPessoasMaioresIdadeEEstadoCivil(final String estadoCivil);
+	public List<EnderecoXmlType> buscarEnderecoDasPessoasMaioresIdadeEEstadoCivil(final String estadoCivil);
 
-	public List<Endereco> buscarEnderecoPorTipoEndereco(final String tipoEndereco);
+	public List<EnderecoXmlType> buscarEnderecoPorTipoEndereco(final String tipoEndereco);
 
-	public List<Endereco> buscarNomeRuaEnderecoPorCidadePorPessoaSexoConjungeComAnoNascimento(final String cidade,
+	public List<EnderecoXmlType> buscarNomeRuaEnderecoPorCidadePorPessoaSexoConjungeComAnoNascimento(final String cidade,
 			final String sexo, final Integer anoNascimentoConjunge);
 
 	public List<String> buscarNomeDoConjungeDasPessoasMaioresIdadeEEstadoCivil(final String estadoCivil);
@@ -85,17 +85,17 @@ public interface Relacionamentos {
 
 	public List<String> buscarNomeDoConjungeMaioresDeIdadeDasPessoasPorEstadoCivil(final String estadoCivil);
 
-	public List<Contato> buscarContatoPorProfissaoAreaAtuacao(final String areaAtuacao);
+	public List<ContatoXmlType> buscarContatoPorProfissaoAreaAtuacao(final String areaAtuacao);
 
-	public List<Contato> buscarContatoPorProfissaoAreaAtuacaoEnderecoPorEstadoEBairro(final String areaAtuacao,
+	public List<ContatoXmlType> buscarContatoPorProfissaoAreaAtuacaoEnderecoPorEstadoEBairro(final String areaAtuacao,
 			final String estado, final String bairro);
 
-	public List<Contato> buscarContatoPorProfissaoAreaAtuacaoEnderecoPorEstadosEBairro(final String areaAtuacao,
+	public List<ContatoXmlType> buscarContatoPorProfissaoAreaAtuacaoEnderecoPorEstadosEBairro(final String areaAtuacao,
 			final List<String> estados, final String bairro);
 
-	public List<Contato> buscarContatoPorTipoContato(final String tipoContato);
+	public List<ContatoXmlType> buscarContatoPorTipoContato(final String tipoContato);
 
-	public List<Contato> buscarContatoPorTiposContato(final List<String> tipoContato);
+	public List<ContatoXmlType> buscarContatoPorTiposContato(final List<String> tipoContato);
 
 	public List<String> buscarEmailPorPessoaAnoNascimentoProfissaoAreaAtuacaoEscolaridadePorAreaAtuacao(
 			final Integer anoNasicmento, final String areaAtuacaoProfissao, final String areaAtuacaoEscolaridade);

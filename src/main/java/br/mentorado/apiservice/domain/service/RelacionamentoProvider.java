@@ -1,18 +1,15 @@
 package br.mentorado.apiservice.domain.service;
 
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
+
+import org.springframework.stereotype.Service;
 
 import br.mentorado.apiservice.domain.Relacionamentos;
-import br.mentorado.apiservice.domain.persistence.entity.Contato;
-import br.mentorado.apiservice.domain.persistence.entity.Empresa;
-import br.mentorado.apiservice.domain.persistence.entity.Endereco;
-import br.mentorado.apiservice.domain.persistence.entity.Pessoa;
-import br.mentorado.apiservice.domain.persistence.entity.Profissao;
-
+import br.mentorado.apiservice.domain.xml.type.ContatoXmlType;
+import br.mentorado.apiservice.domain.xml.type.EnderecoXmlType;
+import br.mentorado.apiservice.domain.xml.type.PessoaXmlType;
+@Service
 public class RelacionamentoProvider implements Relacionamentos {
 
 	@Override
@@ -40,123 +37,123 @@ public class RelacionamentoProvider implements Relacionamentos {
 	}
 
 	@Override
-	public List<Pessoa> buscarPessoasPorTipoResidencia(String tipoResidencia) {
+	public List<PessoaXmlType> buscarPessoasPorTipoResidencia(String tipoResidencia) {
 		// XXX Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public List<Pessoa> buscarPessoasPorTipoContato(String tipoContato) {
+	public List<PessoaXmlType> buscarPessoasPorTipoContato(String tipoContato) {
 		// XXX Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public List<Pessoa> buscarPessoasPorBairro(String bairro) {
+	public List<PessoaXmlType> buscarPessoasPorBairro(String bairro) {
 		// XXX Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public List<Pessoa> buscarPessoasPorNomeBairroContem(String valor) {
+	public List<PessoaXmlType> buscarPessoasPorNomeBairroContem(String valor) {
 		// XXX Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public List<Pessoa> buscarPessoasPorEstado(String estado) {
+	public List<PessoaXmlType> buscarPessoasPorEstado(String estado) {
 		// XXX Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public List<Pessoa> buscarPessoasPorProfissao(String nomeProfissao) {
+	public List<PessoaXmlType> buscarPessoasPorProfissao(String nomeProfissao) {
 		// XXX Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public List<Pessoa> buscarPessoasPorProfissaoNomeAreaAtuacaoContem(String valor) {
+	public List<PessoaXmlType> buscarPessoasPorProfissaoNomeAreaAtuacaoContem(String valor) {
 		// XXX Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public List<Pessoa> buscarPessoasPorSalarioBaseMaiorQue(BigDecimal salarioBase) {
+	public List<PessoaXmlType> buscarPessoasPorSalarioBaseMaiorQue(BigDecimal salarioBase) {
 		// XXX Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public List<Pessoa> buscarPessoasPorSalarioBaseMaiorIgual(BigDecimal salarioBase) {
+	public List<PessoaXmlType> buscarPessoasPorSalarioBaseMaiorIgual(BigDecimal salarioBase) {
 		// XXX Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public List<Pessoa> buscarPessoasPorSalarioBaseEntre(BigDecimal salarioBaseInicio, BigDecimal salarioBaseFim) {
+	public List<PessoaXmlType> buscarPessoasPorSalarioBaseEntre(BigDecimal salarioBaseInicio, BigDecimal salarioBaseFim) {
 		// XXX Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public List<Pessoa> buscarPessoasPorEscolaridadeConcluida() {
+	public List<PessoaXmlType> buscarPessoasPorEscolaridadeConcluida() {
 		// XXX Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public List<Pessoa> buscarPessoasPorEscolaridadeAreaAtuacao(String areaAtuacao) {
+	public List<PessoaXmlType> buscarPessoasPorEscolaridadeAreaAtuacao(String areaAtuacao) {
 		// XXX Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public List<Pessoa> buscarPessoasPorEscolaridadeAnoTermino(Integer ano) {
+	public List<PessoaXmlType> buscarPessoasPorEscolaridadeAnoTermino(Integer ano) {
 		// XXX Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public List<Pessoa> buscarPessoasPorEscolaridadeQuantidadeSemestre(Integer semestre) {
+	public List<PessoaXmlType> buscarPessoasPorEscolaridadeQuantidadeSemestre(Integer semestre) {
 		// XXX Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public List<Pessoa> buscarPessoasPorProfissaoAreaAtuacaoEscolaridadeConcluido(String areaAtuacao) {
+	public List<PessoaXmlType> buscarPessoasPorProfissaoAreaAtuacaoEscolaridadeConcluido(String areaAtuacao) {
 		// XXX Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public List<Pessoa> buscarPessoasPorProfissaoAreaAtuacaoEscolaridadePorSemestre(String areaAtuacao,
+	public List<PessoaXmlType> buscarPessoasPorProfissaoAreaAtuacaoEscolaridadePorSemestre(String areaAtuacao,
 			Integer semestre) {
 		// XXX Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public List<Pessoa> buscarPessoasPorEstadoCivilProfissaoAreaAtuacaoEscolaridadePorAreaAtuacao(String estadoCivil,
+	public List<PessoaXmlType> buscarPessoasPorEstadoCivilProfissaoAreaAtuacaoEscolaridadePorAreaAtuacao(String estadoCivil,
 			String areaAtuacaoProfissao, String areaAtuacaoEscolaridade) {
 		// XXX Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public List<Endereco> buscarEnderecoDasPessoasMaioresIdadeEEstadoCivil(String estadoCivil) {
+	public List<EnderecoXmlType> buscarEnderecoDasPessoasMaioresIdadeEEstadoCivil(String estadoCivil) {
 		// XXX Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public List<Endereco> buscarEnderecoPorTipoEndereco(String tipoEndereco) {
+	public List<EnderecoXmlType> buscarEnderecoPorTipoEndereco(String tipoEndereco) {
 		// XXX Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public List<Endereco> buscarNomeRuaEnderecoPorCidadePorPessoaSexoConjungeComAnoNascimento(String cidade,
+	public List<EnderecoXmlType> buscarNomeRuaEnderecoPorCidadePorPessoaSexoConjungeComAnoNascimento(String cidade,
 			String sexo, Integer anoNascimentoConjunge) {
 		// XXX Auto-generated method stub
 		return null;
@@ -181,33 +178,33 @@ public class RelacionamentoProvider implements Relacionamentos {
 	}
 
 	@Override
-	public List<Contato> buscarContatoPorProfissaoAreaAtuacao(String areaAtuacao) {
+	public List<ContatoXmlType> buscarContatoPorProfissaoAreaAtuacao(String areaAtuacao) {
 		// XXX Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public List<Contato> buscarContatoPorProfissaoAreaAtuacaoEnderecoPorEstadoEBairro(String areaAtuacao, String estado,
+	public List<ContatoXmlType> buscarContatoPorProfissaoAreaAtuacaoEnderecoPorEstadoEBairro(String areaAtuacao, String estado,
 			String bairro) {
 		// XXX Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public List<Contato> buscarContatoPorProfissaoAreaAtuacaoEnderecoPorEstadosEBairro(String areaAtuacao,
+	public List<ContatoXmlType> buscarContatoPorProfissaoAreaAtuacaoEnderecoPorEstadosEBairro(String areaAtuacao,
 			List<String> estados, String bairro) {
 		// XXX Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public List<Contato> buscarContatoPorTipoContato(String tipoContato) {
+	public List<ContatoXmlType> buscarContatoPorTipoContato(String tipoContato) {
 		// XXX Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public List<Contato> buscarContatoPorTiposContato(List<String> tipoContato) {
+	public List<ContatoXmlType> buscarContatoPorTiposContato(List<String> tipoContato) {
 		// XXX Auto-generated method stub
 		return null;
 	}
