@@ -3,8 +3,10 @@ package br.mentorado.apiservice.domain.service;
 import java.util.ArrayList;
 import java.util.List;
 
-import br.mentorado.apiservice.domain.Fila;
+import org.springframework.stereotype.Service;
 
+import br.mentorado.apiservice.domain.Fila;
+@Service
 public class FilaService<T> implements Fila<T> {
 
 	private class No {

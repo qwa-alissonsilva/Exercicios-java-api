@@ -2,8 +2,10 @@ package br.mentorado.apiservice.domain.service;
 
 import java.util.Arrays;
 
-import br.mentorado.apiservice.domain.Ordenacao;
+import org.springframework.stereotype.Service;
 
+import br.mentorado.apiservice.domain.Ordenacao;
+@Service
 public class OrdenacaoService implements Ordenacao {
 
 	@Override

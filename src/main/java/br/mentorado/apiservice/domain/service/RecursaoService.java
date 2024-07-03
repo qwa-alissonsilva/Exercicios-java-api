@@ -1,7 +1,9 @@
 package br.mentorado.apiservice.domain.service;
 
-import br.mentorado.apiservice.domain.Recursao;
+import org.springframework.stereotype.Service;
 
+import br.mentorado.apiservice.domain.Recursao;
+@Service
 public class RecursaoService implements Recursao {
 
 	@Override

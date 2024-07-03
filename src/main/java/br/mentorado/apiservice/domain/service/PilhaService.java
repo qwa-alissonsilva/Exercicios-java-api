@@ -3,8 +3,10 @@ package br.mentorado.apiservice.domain.service;
 import java.util.ArrayList;
 import java.util.List;
 
-import br.mentorado.apiservice.domain.Pilha;
+import org.springframework.stereotype.Service;
 
+import br.mentorado.apiservice.domain.Pilha;
+@Service
 public class PilhaService<T> implements Pilha<T> {
 
 	private List<T> elementos;

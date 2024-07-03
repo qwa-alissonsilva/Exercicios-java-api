@@ -6,12 +6,15 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.mentorado.apiservice.domain.persistence.entity.Funcionario;
 import br.mentorado.apiservice.domain.service.LogicaProgramacaoService;
+import br.mentorado.apiservice.web.controller.type.RequisicaoArrayType;
 
 @CrossOrigin(origins = "http://localhost:8080")
 @RestController
@@ -187,7 +190,7 @@ public class LogicaProgramacaoController {
 		return this.logicaProgramacaoService.numerosPares(limite);
 	}
 
-	@GetMapping("/antecessorSucessorPor")
+	@GetMapping("/antecessorSucessorPorValor")
 	public String[] antecessorSucessorPorValor(@RequestParam final String[] array, @RequestParam final String valor) {
 		return this.logicaProgramacaoService.antecessorSucessorPor(array, valor);
 	}
@@ -197,10 +200,10 @@ public class LogicaProgramacaoController {
 		return this.logicaProgramacaoService.antecessorSucessorPor(array, posicao);
 	}
 
-	@GetMapping("/arrayMultidimensionalPorValor")
-	public String[] arrayMultidimensionalPorValor(@RequestParam final String[][] arrayMultidimensional,
-			@RequestParam final String valor) {
-		return this.logicaProgramacaoService.arrayMultidimensionalPorValor(arrayMultidimensional, valor);
+	@PostMapping("/arrayMultidimensionalPorValor")
+	public String[] arrayMultidimensionalPorValor(@RequestBody RequisicaoArrayType requisicaoArrayType) {
+		return this.logicaProgramacaoService
+				.arrayMultidimensionalPorValor(requisicaoArrayType.getArrayMultidimensional(), null);
 	}
 
 	@GetMapping("/arrayMultidimensionalPorPosicoes")

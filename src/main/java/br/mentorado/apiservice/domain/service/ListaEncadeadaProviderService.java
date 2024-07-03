@@ -3,8 +3,10 @@ package br.mentorado.apiservice.domain.service;
 import java.util.ArrayList;
 import java.util.List;
 
-import br.mentorado.apiservice.domain.ListaEncadeada;
+import org.springframework.stereotype.Service;
 
+import br.mentorado.apiservice.domain.ListaEncadeada;
+@Service
 public class ListaEncadeadaProviderService<T> implements ListaEncadeada<T> {
 
 	private class No {

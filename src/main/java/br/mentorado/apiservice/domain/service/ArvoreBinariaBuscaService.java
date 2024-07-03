@@ -3,8 +3,10 @@ package br.mentorado.apiservice.domain.service;
 import java.util.ArrayList;
 import java.util.List;
 
-import br.mentorado.apiservice.domain.ArvoreBinariaBusca;
+import org.springframework.stereotype.Service;
 
+import br.mentorado.apiservice.domain.ArvoreBinariaBusca;
+@Service
 public class ArvoreBinariaBuscaService implements ArvoreBinariaBusca {
 	private Nodo raiz;
 
